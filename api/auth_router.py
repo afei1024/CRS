@@ -10,7 +10,7 @@ templates = Jinja2Templates(directory="app/templates")
 
 @router.get("/login", response_class=HTMLResponse)
 async def login_page(request: Request):
-    return templates.TemplateResponse("login.html", {"request": request})
+    return templates.TemplateResponse("student_login.html", {"request": request})
 
 @router.post("/login")
 async def login_submit(
@@ -21,7 +21,7 @@ async def login_submit(
     user = await authenticate_user(username, password)
     if not user:
         return templates.TemplateResponse(
-            "login.html",
+            "student_login.html",
             {"request": request, "error": "用户名或密码错误"},
             status_code=401
         )
