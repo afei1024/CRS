@@ -43,78 +43,21 @@ export default {
 
     // 文件上传
     Vue.prototype.$uploadFile = uploadFile
-    // BioBank---测试版      服务地址,图片上传文件
+    //测试版      服务地址,图片上传文件
     Vue.prototype.$imgServerHost = imgServerHost
     Vue.prototype.$imghost = imgServerHost
-    // BioBank---测试版      标签打印后台的url   -----这个url 不需要http://   切记
+    //测试版      标签打印后台的url   -----这个url 不需要http://   切记
     Vue.prototype.$printUrl = printUrl
 
-    // BioBank---本地开发      服务地址,图片上传文件
+    //本地开发      服务地址,图片上传文件
     // Vue.prototype.$imgServerHost = 'http://localhost:9635'
     // Vue.prototype.$imghost = 'http://localhost:9635'
-    // // BioBank---本地开发      标签打印后台的url   -----这个url 不需要http://   切记
+    // //本地开发      标签打印后台的url   -----这个url 不需要http://   切记
     // Vue.prototype.$printUrl = 'localhost:9635/api/print'
 
-    // // BioBank---基础版   服务地址,图片上传文件
-    // Vue.prototype.$imgServerHost = 'http://39.98.34.197:9672'
-    // Vue.prototype.$imghost = 'http://39.98.34.197:9672'
-    // // BioBank---基础版   标签打印后台的url   -----这个url 不需要http://   切记
-    // Vue.prototype.$printUrl = '39.98.34.197:9672/api/print'
 
-    // BioBank---标准版   服务地址,图片上传文件
-    // Vue.prototype.$imgServerHost = 'http://47.108.24.36:8006'
-    // Vue.prototype.$imghost = 'http://47.108.24.36:8006'
-    // // BioBank---标准版   标签打印后台的url   -----这个url 不需要http://   切记
-    // Vue.prototype.$printUrl = '47.108.24.36:8006/api/print'
 
-    // // 四川濒危物种      服务地址,图片上传文件
-    // // 文件上传
-    // Vue.prototype.$uploadFile = 'http://192.168.27.3:9333/dir/assign'
-    // Vue.prototype.$uploadFileurl = 'http://192.168.27.3:9333'
-    // Vue.prototype.$imgServerHost = 'http://192.168.27.3:9655'
-    // Vue.prototype.$imghost = 'http://192.168.27.3:9655'
-    // // 四川濒危物种      标签打印后台的url   -----这个url 不需要http://   切记
-    // Vue.prototype.$printUrl = '192.168.27.3:9655/api/print'
-
-    // 北京协议医院---生物样本库系统
-    // Vue.prototype.$imgServerHost = 'http://192.168.3.67:9655'
-    // Vue.prototype.$imghost = 'http://192.168.3.67:9655'
-    // Vue.prototype.$printUrl = '192.168.3.67:9655/api/print'
-
-    // 世纪坛医院---生物样本库地址
-    // Vue.prototype.$imgServerHost = 'http://192.168.177.128:9655'
-    // Vue.prototype.$imghost = 'http://192.168.177.128:9655'
-    // Vue.prototype.$printUrl = '192.168.177.128:9655/api/print'
-
-    // 临沂人民医院---遗传检验科地址
-    // Vue.prototype.$imghost = 'http://188.188.30.89:9655'
-    // Vue.prototype.$printUrl = '188.188.30.89:9655/api/print'
-
-    // // 广东佛山妇幼---标准版   服务地址,图片上传文件
-    // Vue.prototype.$imgServerHost = 'http://39.98.34.197:9682'
-    // Vue.prototype.$imghost = 'http://39.98.34.197:9682'
-    // // 广东佛山妇幼---标准版   标签打印后台的url   -----这个url 不需要http://   切记
-    // Vue.prototype.$printUrl = '39.98.34.197:9682/api/print'
-
-    // // 省立医院---标准版   服务地址,图片上传文件
-    // Vue.prototype.$imgServerHost = 'http://39.98.34.197:9694'
-    // Vue.prototype.$imghost = 'http://39.98.34.197:9694'
-    // // 省立医院---标准版   标签打印后台的url   -----这个url 不需要http://   切记
-    // Vue.prototype.$printUrl = '39.98.34.197:9694/api/print'
-
-    // // 长三角      服务地址,图片上传文件
-    // // 文件上传
-    // Vue.prototype.$uploadFile = 'http://weed1.labsop.cn:9333/dir/assign'
-    // Vue.prototype.$uploadFileurl = 'http://weed1.labsop.cn:9333'
-    // Vue.prototype.$imgServerHost = 'http://39.98.34.197:9692'
-    // Vue.prototype.$imghost = 'http://39.98.34.197:9692'
-    // // 长三角      标签打印后台的url   -----这个url 不需要http://   切记
-    // Vue.prototype.$printUrl = '39.98.34.197:9692/api/print'
-
-    // 工作流图片地址
-    // Vue.prototype.$actiimghost_dqm = '//39.98.34.197:9635/api/'
-    // Vue.prototype.$actiimghost_drugd = '//39.98.34.197:9650/api/'
-    // Vue.prototype.$actiimghost_nuwa = '//39.98.34.197:9652/api/'
+   
     // Element
     Vue.use(ElementUI)
     // 插件
