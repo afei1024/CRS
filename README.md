@@ -31,25 +31,46 @@
 ### （一）、文件布局设计
 
     project/
-        api/                    # API 路由模块
-            auth_router.py
-        service/                # 业务逻辑层
-            auth_service.py
-        models/                 # 数据库模型
-            user_model.py
-        config/                 # 配置类（数据库、Redis）
-            db_config.py
-            redis_config.py
-        utils/                  # 工具类（加密、日志）
-            security.py
-            logger.py
-        static/                 # 静态文件（CSS/JS）
-            style.css
-        templates/              # HTML 模板
-            login.html
-        main.py                 # 应用入口
-        requirements.txt
-        .env                        # 环境变量配置
+    api/                    # API 路由模块
+        auth_router.py      # 登录、注册、忘记密码等认证相关路由
+        issue_report.py     # 问题上报相关路由
+        management.py       # 报修单管理相关路由
+        user_profile.py     # 用户个人中心相关路由
+        technician.py       # 维修人员相关路由
+        statistics.py       # 统计与报表相关路由
+        notification.py     # 通知与提醒相关路由
+        settings.py         # 系统设置相关路由
+        logs.py            # 日志与监控相关路由
+        feedback.py        # 用户反馈相关路由
+    service/                # 业务逻辑层
+        auth_service.py     # 认证相关业务逻辑
+        repair_service.py   # 报修相关业务逻辑
+        user_service.py     # 用户相关业务逻辑
+        technician_service.py # 维修人员相关业务逻辑
+        statistics_service.py # 统计相关业务逻辑
+        notification_service.py # 通知相关业务逻辑
+        settings_service.py # 系统设置相关业务逻辑
+        logs_service.py     # 日志相关业务逻辑
+        feedback_service.py # 反馈相关业务逻辑
+    models/                 # 数据库模型
+        user_model.py       # 用户模型
+        repair_model.py     # 报修单模型
+        notification_model.py # 通知模型
+        feedback_model.py   # 反馈模型
+    config/                 # 配置类（数据库、Redis）
+        db_config.py        # 数据库配置
+        redis_config.py     # Redis配置
+    utils/                  # 工具类（加密、日志）
+        security.py         # 加密工具
+        logger.py           # 日志工具
+    static/                 # 静态文件（CSS/JS）
+        style.css           # 前端样式
+    templates/              # HTML 模板
+        login.html         # 登录页面模板
+    app.py                  # 整合路由，集中注册所有子路由
+    main.py                 # 应用入口
+    requirements.txt        # 依赖文件
+    .env                    # 环境变量配置
 
 ### （二）、.数据库设计
 ### 1. MySQL 表结构
@@ -80,7 +101,29 @@ CREATE TABLE repair_order (
 * 会话管理‌（存储 JWT 令牌或用户登录状态）‌
 
 ### （三）、网站设计及前后端代码构想实现
+### （一）、文件布局设计
 
+    project/
+        api/                    # API 路由模块
+            auth_router.py
+        service/                # 业务逻辑层
+            auth_service.py
+        models/                 # 数据库模型
+            user_model.py
+        config/                 # 配置类（数据库、Redis）
+            db_config.py
+            redis_config.py
+        utils/                  # 工具类（加密、日志）
+            security.py
+            logger.py
+        static/                 # 静态文件（CSS/JS）
+            style.css
+        templates/              # HTML 模板
+            login.html
+        app.py                  # 整合路由，集中注册所有子路由
+        main.py                 # 应用入口
+        requirements.txt
+        .env                        # 环境变量配置
 #### 1. 登录页面
 **功能需求：**
 - **用户登录**：用户可以通过输入用户名和密码进行登录。
